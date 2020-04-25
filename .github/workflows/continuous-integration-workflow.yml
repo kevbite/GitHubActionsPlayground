@@ -1,0 +1,21 @@
+name: Example Workflow
+on: [push]
+
+jobs:
+  example-job:
+    name: An exmaple job
+    runs-on: ubuntu-latest
+    env:
+      MY_ENV_1: My environment variable 1
+      MY_ENV_2: My environment variable 2
+      
+    steps:
+      - name: Echo MY_ENV_1
+        run: echo $MY_ENV_1
+        
+      - name: Echo MY_ENV_2
+        run: echo $MY_ENV_2
+      
+      - name: Echo MY_ENV_1 and MY_ENV_2
+        run: echo $MY_ENV_1, $MY_ENV_2
+      
