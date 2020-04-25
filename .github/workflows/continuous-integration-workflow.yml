@@ -9,9 +9,9 @@ jobs:
       - name: Echo MY_VERSION step 1
         run: echo $MY_VERSION
         env:
-          MY_VERSION: 1.0.{{ github.run_number }}
+          MY_VERSION: 1.0.${{ github.run_number }}
 
       - name: Echo MY_VERSION step 1
         run: echo $MY_VERSION
         env:
-          MY_VERSION: 1.0.{{ github.run_number }}
+          MY_VERSION: 1.0.${{ github.run_number }}
