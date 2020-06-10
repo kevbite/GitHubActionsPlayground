@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest     
     env:
       MY_VERSION: 1.0.${{ github.run_number }}
+      SHOULD_RUN: true
     steps:
       - name: Echo MY_VERSION step 1
         run: echo $MY_VERSION
 
       - name: Echo MY_VERSION step 2
         run: echo $MY_VERSION
+        if: ${{ $MY_VERSION == true }}
