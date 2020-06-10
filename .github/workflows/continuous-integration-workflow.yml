@@ -14,4 +14,4 @@ jobs:
 
       - name: Echo MY_VERSION step 2
         run: echo $MY_VERSION
-        if: ${{ $MY_VERSION == true }}
+        if: ${{ env.MY_VERSION == true }}
